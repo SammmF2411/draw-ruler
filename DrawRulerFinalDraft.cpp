@@ -8,12 +8,10 @@ using namespace std;
 
 void drawTickMarks(int, int);
 void drawLabels(int, int);
-
 void drawRuler(int, int, int, int);
 
-int main() 
-
-{
+int main() {
+	
 	int ruler_length = 0;
 	int denominator = 0;
 	
@@ -44,7 +42,6 @@ void drawTickMarks(int num_TickMarks, int spacing){
 	}
 	cout<< endl;
 	cout << setw(0); //set new spacing after the loop
-
 	return;
 }
 
@@ -56,17 +53,14 @@ void drawLabels(int num_labels, int spacing){
 			cout << setw(spacing + 1);
 			cout << i;
 			cout<< setw(spacing);
-		}
-		
+		}		
 		else{
 		cout << i;
 		cout << setw(spacing);
-		}
-		
+		}		
 	}
 	cout << endl;
 	cout << setw(0);
-
 	return;
 }
 
@@ -78,40 +72,15 @@ void drawRuler(int currTicks, int currSpacing, int orgTicks, int orgSpacing){
 		drawLabels(orgTicks, orgSpacing);
 		return;
 	}
-	
 	int index;
 	index = log2(currSpacing);
 	
 	if (index %2 ==0){ //print only if even
 	drawTickMarks(currTicks, currSpacing);
 	}
-
 	drawRuler((actualTicks-1)*2, currSpacing/2, orgTicks, orgSpacing);
-	
 	
 	if (index %2 != 0 || currSpacing == orgSpacing/orgSpacing){ //print only if odd and print the 0 index line
 	drawTickMarks(currTicks, currSpacing);
-	}
-	
+	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
