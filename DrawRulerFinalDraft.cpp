@@ -84,24 +84,3 @@ void drawRuler(int currTicks, int currSpacing, int orgTicks, int orgSpacing){
 	drawTickMarks(currTicks, currSpacing);
 	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
