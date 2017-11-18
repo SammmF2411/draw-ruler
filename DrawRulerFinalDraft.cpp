@@ -11,7 +11,6 @@ void drawLabels(int, int);
 void drawRuler(int, int, int, int);
 
 int main() {
-	
 	int ruler_length = 0;
 	int denominator = 0;
 	
@@ -33,9 +32,7 @@ int main() {
 	drawRuler(ruler_length, denominator, ruler_length, denominator);
 	return 0;
 }
-
 void drawTickMarks(int num_TickMarks, int spacing){
-	
 	for (int i = 0; i < num_TickMarks + 1; i++){
 		cout <<  "|";
 		cout << setw(spacing);
@@ -44,9 +41,7 @@ void drawTickMarks(int num_TickMarks, int spacing){
 	cout << setw(0); //set new spacing after the loop
 	return;
 }
-
 void drawLabels(int num_labels, int spacing){
-	
 	for(int i = 0; i < num_labels + 1; i++){
 		
 		if (i == 10){ //only need to shift the spacing by 1 once when we hit the double digits
@@ -63,9 +58,7 @@ void drawLabels(int num_labels, int spacing){
 	cout << setw(0);
 	return;
 }
-
 void drawRuler(int currTicks, int currSpacing, int orgTicks, int orgSpacing){
-	
 	int actualTicks = currTicks+1; //must account for 0
 	
 	if (currSpacing == 0){ // base case
